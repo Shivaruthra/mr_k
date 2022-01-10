@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../jquery.min.js">
+</script>
+<link rel="stylesheet" href="../css/sales.css">
+  </head>
+  <body>
+    <div class="container">
+    <table>
+      <tr>
+      <th>Product</th>
+      <th>Rate</th>
+      <th>Quantity</th>
+      <th>Amount</th>
+      </tr>
+      <tr>
+        <td><select>
+          <option selected>Super Market</option>
+          <option>Bliss</option>
+          <option>kalanjiyam</option>
+          <option>udhayam</option>
+          <option>svs</option>
+        </select>
+        </td>
+        <td><input type="text" id="r"></td>
+        <td><input type="text" id="q"></td>
+        <td><input type="text" id="a" onclick="add()"></td>
+        <td><button class="add">add</button></td>
+        <td><button class="remove">remove</button></td>
+      </tr>
+    </table>
+  </div>
+<script>
+  $(document).ready(function () {
+    $(".add").click(function () { 
+      $("table").append('<tr><td><select><option selected>Super Market</option><option>Bliss</option><option>kalanjiyam</option><option>udhayam</option><option>svs</option></select></td><td><input type="text" id="r"></td><td><input type="text" id="q"></td><td><input type="text" id="a" onclick="add()"></td><td><button class="add">add</button></td><td><button class="remove">remove</button></td></tr>')     
+    $(".add").hover(function () {
+        // over
+        $("tr").css("display","none");
+      }, function () {
+        // out
+      }
+    );
+    });
+  });
+</script>
+  </body>
+</html>
